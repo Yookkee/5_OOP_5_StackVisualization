@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<level>
+	<instruction command="mov" par2="1" par1="EAX" />
+	<instruction command="jmp"par2="ntn" par1="EAX" />
+	<instruction command="mov"par2="2" par1="EAX" />
+	<instruction command="push" par2="ntn" par1="EAX"/>
+	<instruction command="jmp" par2="ntn" par1="1"/>
+	<instruction par2="ntn" par1="EAX" command="pop"/>
+	<instruction par2="ntn" par1="EBP" command="push"/>
+	<instruction par2="ESP" par1="EBP" command="mov"/>
+	<instruction par2="EBP" par1="ESP" command="mov"/>
+	<instruction par2="ntn" par1="EPB" command="pop"/>
+	<instruction par2="ntn" par1="3" command="push"/>
+	<instruction par2="ntn" par1="EAX" command="pop"/>
+	<instruction par2="ntn" par1="ESP" command="push"/>
+	<instruction par2="ntn" par1="ESP" command="pop"/>
+	<instruction par2="ntn" par1="145B8" command="call"/>
+	<instruction par2="145B8" par1="EAX" command="mov"/>
+	<instruction par2="ntn" par1="EAX" command="call"/>
+	<instruction par2="0" par1="EAX" command="mov"/>
+	<instruction par2="ntn" par1="EAX" command="push"/>
+</level>
