@@ -12,6 +12,13 @@
 <instruction command="push" arg1="10"   arg2="None" />
 <instruction command="push" arg1="ebp"  arg2="None" />
 <instruction command="push" arg1="esp"  arg2="None" />
-<instruction command="call" arg1="5"    arg2="None" />
-<instruction command="mov"  arg1="ebp"  arg2="eax"  />
+<instruction command="mov"  arg1="eax"  arg2="5" />
+<instruction command="call" arg1="eax"  arg2="None" />
+<instruction command="push" arg1="esp"  arg2="None" />
+<instruction command="mov"  arg1="ebp"  arg2="esp"  />
+<instruction command="push" arg1="esp"  arg2="None" />
+<instruction command="push" arg1="esp"  arg2="None" />
+<instruction command="push" arg1="esp"  arg2="None" />
+<instruction command="mov"  arg1="esp"  arg2="ebp"  />
+<instruction command="pop"  arg1="eax"  arg2="None"  />
 <instruction command="mov"  arg1="ebp"  arg2="100h"  />

@@ -596,6 +596,18 @@ void BaseApplication::inst_mov(int idx)
 			esp = ebp;
 		else
 			esp = atoi(Instructions[idx].arg2.c_str());
+
+		if (esp == 0) Stack.clear();
+		else
+		{
+			for (int i = Stack.size() - 1; i >= 0; --i)
+			{
+				if ((unsigned int)esp > (unsigned int)((-1) * i * 4) - 1)
+					Stack.pop_back();
+				else
+					break;
+			}
+		}
 	}
 	else if (Instructions[idx].arg1 == "eax")
 	{
@@ -638,6 +650,9 @@ void BaseApplication::inst_push(int idx)
 
 void BaseApplication::inst_pop(int idx)
 {
+	if (esp == 0)
+		std::cout << "" << std::endl;
+
 	if (Instructions[idx].arg1 == "ebp")
 	{
 		ebp = Stack[Stack.size() - 1];
